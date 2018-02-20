@@ -117,15 +117,6 @@ nav
 				.arrow
 
 
-		// .wN1SB1
-		// 	min-width: 18%
-		// .wN1SB2
-		// 	min-width: 20%
-		// .wN1SB3
-		// 	min-width: 22%
-
-
-
 .nav1Sub
 	display: none
 	background: #fff
@@ -227,6 +218,10 @@ nav
 //SECT 1
 //////////////////////////
 
+.inputBtn:hover, .inputBtn7:hover
+	cursor: pointer
+	background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%)
+	background: #f4511e
 
 .inputMain
 	border: none
@@ -257,6 +252,7 @@ nav
 
 		.inputBtn
 			color: #ffffff
+			border-radius: 0 3px 3px 0
 			background: linear-gradient(to bottom,#f4511e 0,#d84315 100%)
 
 	.wrapCategories
@@ -300,11 +296,6 @@ nav
 			content: ''
 			background-image: url(img/img_2_1.png)
 
-		.inputBtn
-			color: #ffffff
-			background: #d84315
-			width: 28%
-			border-radius: 0 3px 3px 0
 
 		
 /////////////////////////
@@ -367,7 +358,17 @@ nav
 	border-radius: 5px 5px 0 0
 	background: #eceff1
 	border-top: 5px solid #03c637
-
+.sec1Sub:before
+	content: ''
+	background: #eceff1
+	position: absolute
+	left: -100%
+	top: 0
+	bottom: 0
+	right: -100%
+	z-index: -1
+.clear_both
+	clear:both
 .sec1Sub
 	display: none
 	background: #eceff1
@@ -390,10 +391,11 @@ nav
 			display: flex
 			flex-wrap: wrap
 			overflow: hidden
-
-			.img5_
+			a
 				width: 100%
-				height: auto
+				.img5_
+					width: 100%
+					height: auto
 
 .wrapData
 	display: flex
@@ -475,10 +477,12 @@ nav
 	///////////////
 
 
-.wrapSec6
+.Bg6
+	clear: both
 	height: 400px
-	background: radial-gradient(circle at 48% 108%, rgb(96, 125, 139), rgb(36, 50, 56))
+	background-image: radial-gradient(circle at 48% 108%, #607d8b, #243238)
 
+.wrapSec6
 
 	
 	///////////////
@@ -489,11 +493,13 @@ nav
 	position: absolute
 	bottom: 0px
 	left: 50%
-	transform: translateX(-50%)
-	// transform: scale(0.9)
+	transform: translate(-50%, 5%) scale(0.9)
+	// transform:
 	display: flex
 	align-self: center
 
+.Bg7
+	background: linear-gradient(rgb(255, 255, 255) 0px, rgb(225, 226, 228) 100%)
 
 .h2_7
 	font-size: 4em
@@ -503,7 +509,6 @@ nav
 .wrapSec7
 	flex-direction: column
 	position: relative
-	background: linear-gradient(rgb(255, 255, 255) 0px, rgb(225, 226, 228) 100%)
 	.wrap7
 		display: flex
 		justify-content: space-between
@@ -542,3 +547,83 @@ nav
 	font-family: 'icomoon' !important
 	content: '\36'
 	height: 10px
+
+
+
+	//-/////////////
+	//-SECT 8
+	//-///////
+
+.Bg8
+
+
+.wrapSec8
+	display: flex
+	flex-direction: column
+	text-align: center
+.txt8
+	font-size: 3em
+	padding: 0 10%
+	margin: 0 0 50px 0
+	line-height: 42px
+	font-weight: 700
+.wrapCenter
+	display: flex
+	justify-content: center
+	.center
+		position: relative
+		width: 50%
+		img 
+			width: 100%
+			height: auto
+		.wrapTxt
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: #ffffff
+			z-index: 2
+			.h1
+				font-weight: 700
+				font-size: 3em
+			p
+				font-size: 13px
+				line-height: 20px
+.item8
+	position: absolute
+	top: 0
+	width: 30%
+	min-width: 200px
+	line-height: 20px
+	h3
+		font-size: 16px
+		margin: 0
+		padding: 0
+	p
+		color: #8CA3AF
+		font-size: 13px
+.item8_1
+	top: 0%
+	right: 90%
+	text-align: right
+.item8_2
+	top: 43%
+	right: 103%
+	text-align: right
+.item8_3
+	top: 85%
+	right: 97%
+	text-align: right
+.item8_4
+	top: -0%
+	left: 97%
+	text-align: left
+.item8_5
+	top: 43%
+	left: 103%
+	text-align: left
+.item8_6
+	top: 85%
+	left: 91%
+	min-width: 220px
+	text-align: left
