@@ -1,8 +1,14 @@
 @font-face {
   font-family: 'icomoon';
   src: url("font/icomoon.ttf");
-    src-font-weight: normal;
-    src-font-style: normal; }
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tm-icomoon';
+  src: url("font/tm-icomoon.ttf");
+  font-weight: normal;
+  font-style: normal; }
 
 .container {
   width: 80%;
@@ -15,7 +21,7 @@
 .arrow:before {
   font-family: 'icomoon';
   font-size: .7em;
-  content: '\31';
+  content: '1';
   margin: 0 0 0 5px; }
 
 body {
@@ -70,6 +76,21 @@ body {
     .header .user-menu .kart:before {
       content: '\35';
       margin: 0 5px 0 0; }
+
+.nav1 {
+  display: flex; }
+
+.lBg {
+  display: flex;
+  flex-grow: 2;
+  background: #343238;
+  border-top-right-radius: 0.5em; }
+
+.rBg {
+  display: flex;
+  flex-grow: 2;
+  background: #343238;
+  border-top-left-radius: 0.5em; }
 
 nav {
   font-size: 1.5em; }
@@ -160,6 +181,13 @@ nav {
     .wn2sb .a2 p {
       padding: 0 0.5em 0 0; }
 
+.wrapTxtNav2 {
+  display: flex;
+  flex-wrap: wrap; }
+
+.pr5 {
+  padding-right: 5px; }
+
 .nav2Sub {
   display: none;
   flex-direction: column;
@@ -189,10 +217,13 @@ nav {
   font-size: 1.4em;
   color: #b0bec5; }
 
-.inputBtn:hover, .inputBtn7:hover {
+.bg1 {
+  background: url(img/bg1.jpg) no-repeat center;
+  background-size: cover; }
+
+.inputBtn7:hover {
   cursor: pointer;
-  background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%);
-  background: #f4511e; }
+  background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%); }
 
 .inputMain {
   border: none;
@@ -201,7 +232,6 @@ nav {
 
 .section1 {
   flex-direction: column;
-  background: url(img/bg1.jpg);
   color: #fff;
   text-align: center; }
   .section1 h1 {
@@ -218,6 +248,10 @@ nav {
       color: #ffffff;
       border-radius: 0 3px 3px 0;
       background: linear-gradient(to bottom, #f4511e 0, #d84315 100%); }
+    .section1 .wrapInput .inputBtn:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%);
+      background: #f4511e; }
   .section1 .wrapCategories {
     display: flex;
     justify-content: space-between; }
@@ -241,19 +275,32 @@ nav {
       border: 2px solid transparent; }
     .section1 .wrapCategories .img1:before {
       content: '';
-      background-image: url(img/img_2_1.png); }
+      background-image: url(img/1.png); }
     .section1 .wrapCategories .img2:before {
       content: '';
-      background-image: url(img/img_2_1.png); }
+      background-image: url(img/3.png); }
     .section1 .wrapCategories .img3:before {
       content: '';
-      background-image: url(img/img_2_1.png); }
+      background-image: url(img/4.png); }
     .section1 .wrapCategories .img4:before {
       content: '';
-      background-image: url(img/img_2_1.png); }
+      background-image: url(img/5.png); }
     .section1 .wrapCategories .img5:before {
       content: '';
-      background-image: url(img/img_2_1.png); }
+      background-image: url(img/6.png); }
+
+.icon-tm:before {
+  font-family: 'tm-icomoon';
+  margin-right: 10px; }
+
+.icon-rocket2:before {
+  content: '\e986'; }
+
+.icon-flag:before {
+  content: '\e985'; }
+
+.icon-like:before {
+  content: '\e983'; }
 
 .wrapSec1Head {
   font-size: 1.8em; }
@@ -396,12 +443,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 20%;
     text-align: center;
     padding: 2%; }
-    .wrapSec5 .block5 .icon5 {
-      height: 40px;
-      width: 40px; }
     .wrapSec5 .block5 h4 {
       font-size: 14px;
       line-height: 21px; }
@@ -411,18 +456,57 @@ nav {
       margin: 0;
       padding: 0; }
 
+.block5:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 70%;
+  width: 1px;
+  right: 0;
+  background: #eceff1; }
+
+.block5:last-child:before {
+  background: none; }
+
+.icon5 {
+  height: 40px;
+  width: 40px; }
+
+.icon5:after {
+  font-family: 'icomoon';
+  font-size: 40px;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%; }
+
+.iconPayment:after {
+  content: 'e'; }
+
+.iconQuality:after {
+  content: 'Q'; }
+
+.iconMoney:after {
+  content: 'b'; }
+
+.iconImprove:after {
+  content: 'I'; }
+
+.iconLike:after {
+  content: 'l'; }
+
 .Bg6 {
   clear: both;
   height: 400px;
   background-image: radial-gradient(circle at 48% 108%, #607d8b, #243238); }
 
 .img7 {
+  display: flex;
+  align-self: center;
   position: absolute;
   bottom: 0px;
   left: 50%;
-  transform: translate(-50%, 5%) scale(0.9);
-  display: flex;
-  align-self: center; }
+  transform: translate(-50%, 5%) scale(0.9); }
 
 .Bg7 {
   background: linear-gradient(white 0px, #e1e2e4 100%); }
@@ -441,6 +525,8 @@ nav {
     justify-content: space-between;
     position: relative;
     z-index: 2; }
+    .wrapSec7 .wrap7 .l7, .wrapSec7 .wrap7 .r7 {
+      width: 35%; }
 
 .block7 {
   display: flex;
@@ -453,7 +539,7 @@ nav {
 .icon7 {
   height: 40px;
   width: 40px;
-  margin-right: 18px; }
+  margin: 0 18px; }
 
 .inputBtn7 {
   display: flex;
