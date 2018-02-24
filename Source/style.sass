@@ -1,8 +1,13 @@
 @font-face 
 	font-family: 'icomoon'
 	src: url('font/icomoon.ttf')
-  font-weight: normal
-  font-style: normal
+	font-weight: normal
+	font-style: normal
+@font-face 
+	font-family: 'tm-icomoon'
+	src: url('font/tm-icomoon.ttf')
+	font-weight: normal
+	font-style: normal
 .container
 	width: 80%
 	margin: 0 auto
@@ -13,7 +18,7 @@
 .arrow:before
 	font-family: 'icomoon'
 	font-size: .7em
-	content: '\31'
+	content: '1'
 	margin: 0 0 0 5px
 body
 	font-family: sans-serif
@@ -77,7 +82,18 @@ body
 //////////////////
 //NAV 1
 //////////////////
-
+.nav1
+	display: flex
+.lBg
+	display: flex
+	flex-grow: 2
+	background: #343238
+	border-top-right-radius: 0.5em
+.rBg
+	display: flex
+	flex-grow: 2
+	background: #343238
+	border-top-left-radius: 0.5em
 
 nav
 	font-size: 1.5em
@@ -179,10 +195,13 @@ nav
 		img
 			height: 30px
 			padding: 10px
-
 		p 
 			padding: 0 0.5em 0 0
-
+.wrapTxtNav2
+	display: flex
+	flex-wrap: wrap
+.pr5
+	padding-right: 5px
 .nav2Sub
 	display: none
 	// display: flex
@@ -209,19 +228,23 @@ nav
 			border: 0
 		&:hover
 			background: #2196f3			
-
 .txtMini
 	font-size: 1.4em
 	color: #b0bec5
+
 
 //////////////////////////
 //SECT 1
 //////////////////////////
 
-.inputBtn:hover, .inputBtn7:hover
+
+.bg1
+	background: url(img/bg1.jpg) no-repeat center
+	background-size: cover
+
+.inputBtn7:hover
 	cursor: pointer
 	background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%)
-	background: #f4511e
 
 .inputMain
 	border: none
@@ -230,7 +253,6 @@ nav
 
 .section1
 	flex-direction: column
-	background: url(img/bg1.jpg)
 	color: #fff
 	text-align: center
 
@@ -241,8 +263,6 @@ nav
 
 	.wrapInput
 		margin-top: 40px
-
-
 		.inputTxt
 			border-radius: 3px 0 0 3px
 			width: 42%
@@ -254,7 +274,10 @@ nav
 			color: #ffffff
 			border-radius: 0 3px 3px 0
 			background: linear-gradient(to bottom,#f4511e 0,#d84315 100%)
-
+		.inputBtn:hover
+			cursor: pointer
+			background: linear-gradient(to bottom, #dc491b 0, #c73d12 100%)
+			background: #f4511e
 	.wrapCategories
 		display: flex
 		justify-content: space-between
@@ -282,19 +305,19 @@ nav
 
 		.img1:before
 			content: ''
-			background-image: url(img/img_2_1.png)
+			background-image: url(img/1.png)
 		.img2:before
 			content: ''
-			background-image: url(img/img_2_1.png)
+			background-image: url(img/3.png)
 		.img3:before
 			content: ''
-			background-image: url(img/img_2_1.png)
+			background-image: url(img/4.png)
 		.img4:before
 			content: ''
-			background-image: url(img/img_2_1.png)
+			background-image: url(img/5.png)
 		.img5:before
 			content: ''
-			background-image: url(img/img_2_1.png)
+			background-image: url(img/6.png)
 
 
 		
@@ -302,6 +325,16 @@ nav
 //SECT 2 MENU 3
 //////////////////////////
 
+
+.icon-tm:before
+	font-family: 'tm-icomoon'
+	margin-right: 10px
+.icon-rocket2:before
+	content: '\e986'
+.icon-flag:before
+	content: '\e985'
+.icon-like:before
+	content: '\e983'
 
 .wrapSec1Head
 	font-size: 1.8em
@@ -380,7 +413,6 @@ nav
 	width: 100%
 
 	.wrapEl
-		// display: flex
 		box-sizing: border-box
 		margin: 0
 		border: 0 solid #fff
@@ -434,7 +466,6 @@ nav
 				line-height: 14px
 				color: #243238
 				white-space: nowrap
-				// overflow: hidden
 	.like
 		display: flex
 		align-self: flex-end
@@ -442,9 +473,12 @@ nav
 .imgTest
 	width: 100%
 	height: auto
+
+
 /////////////////////////
 //SECT 5 X3
 //////////////////////////
+
 
 .wrapSec5
 	display: flex
@@ -455,13 +489,10 @@ nav
 		display: flex
 		flex-direction: column
 		align-items: center
+		position: relative
 		width: 20%
 		text-align: center
 		padding: 2%
-
-		.icon5
-			height: 40px
-			width: 40px
 		h4
 			font-size: 14px
 			line-height: 21px
@@ -470,6 +501,38 @@ nav
 			line-height: 21px
 			margin: 0
 			padding: 0
+.block5:before
+	content: ''
+	display: block
+	position: absolute
+	height: 70%
+	width: 1px
+	right: 0
+	background: #eceff1
+.block5:last-child:before
+	background: none
+
+.icon5
+	height: 40px
+	width: 40px
+.icon5:after
+	font-family: 'icomoon'
+	font-size: 40px
+	content: ''
+	display: block
+	height: 100%
+	width: 100%
+.iconPayment:after
+	content: 'e'
+.iconQuality:after
+	content: 'Q'
+.iconMoney:after
+	content: 'b'
+.iconImprove:after
+	content: 'I'
+.iconLike:after
+	content: 'l'
+
 
 
 	///////////////
@@ -489,14 +552,15 @@ nav
 	//SECT 7
 	///////////////
 
+
+
 .img7
+	display: flex
+	align-self: center
 	position: absolute
 	bottom: 0px
 	left: 50%
 	transform: translate(-50%, 5%) scale(0.9)
-	// transform:
-	display: flex
-	align-self: center
 
 .Bg7
 	background: linear-gradient(rgb(255, 255, 255) 0px, rgb(225, 226, 228) 100%)
@@ -514,6 +578,8 @@ nav
 		justify-content: space-between
 		position: relative
 		z-index: 2
+		.l7, .r7
+			width: 35%
 .block7
 	display: flex
 	align-items: center
@@ -525,7 +591,7 @@ nav
 .icon7
 	height: 40px
 	width: 40px
-	margin-right: 18px
+	margin: 0 18px
 
 .inputBtn7
 	display: flex
@@ -552,7 +618,7 @@ nav
 
 	//-/////////////
 	//-SECT 8
-	//-///////
+	//-///////////
 
 .Bg8
 

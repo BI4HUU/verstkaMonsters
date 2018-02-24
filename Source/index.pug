@@ -19,7 +19,8 @@ html
 				//-NAV 1
 				//-////////////////
 
-		nav
+		nav.nav1
+			.lBg
 			.wrapNav1Sub.wn1sb.container
 				//- mixin nav1Menu(a1)
 				.wrapNav1SubBlock.wN1SB1
@@ -32,7 +33,7 @@ html
 								img(src=i)
 								h4= h4
 								p= p
-						+nav1Block("img/1.png", '1WordPress шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
+						+nav1Block("img/1.png", 'HTML шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
 						+nav1Block("img/1.png", 'WordPress шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
 						+nav1Block("img/1.png", 'WordPress шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
 						+nav1Block("img/1.png", 'WordPress шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
@@ -80,49 +81,89 @@ html
 						+nav1Block("img/1.png", 'WordPress шаблони', 'Три причини використовувати WordPress: простота, надійність, швидкість.')
 				.wrapNav1SubBlock.wN1SB6
 					a.a1(href="") ПОСЛУГИ
-
+			.rBg
 					//-//////////////////////////////
 					//-NAV 2
 					//-////////////////////////////
 
-
+		nav.nav2
 			.wrapNav1Sub.container
-				mixin nav2Block(p1, p2, a1, a2, a3)
+				mixin nav2Block(p1, p2, img)
 					.wrapNav1SubBlock.wn2sb
 						a.a2(href="google.com")
-							img(src="img/wp.svg")
-							span
-								div= p1
-								div= p2
+							img(src=img)
+							span.wrapTxtNav2
+								div.pr5= p1
+								div.pr5= p2
 						.nav2Sub
-							a(href="")= a1
-							a(href="")= a2
-							a(href="")= a3
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
-				+nav2Block(' HTML ', ' шаблони', 'Популярні', 'Рекомендовані', 'Електроніка')
+							if block
+								block
+				+nav2Block(' WordPress ', ' шаблони', "img/wp.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
+				+nav2Block(' HTML ', ' шаблони', "img/HTML.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Дизайн
+					a(href="") Медицина
+				+nav2Block(' Joomla ', ' шаблони', "img/Joomla.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
+				+nav2Block(' PrestaShop ', ' шаблони', "img/PrestaShop.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
+				+nav2Block(' OpenCart ', ' шаблони', "img/OpenCart.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
+				+nav2Block(' Magento ', ' шаблони', "img/Magento.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
+				+nav2Block(' MotoCMS ', ' шаблони', "img/MotoCMS.svg")
+					a(href="") Популярні
+					a(href="") Рекомендовані
+					a(href="") Бізнес
+					a(href="") Нерухомість
+					a(href="") Дизайн та фото
 
 						//-////////////////////////
 						//-SECT 1
 						//-////////////////////////
 
-		section.section1.container.block
-			h1 26 640 преміум шаблонів для створення<br> сайтів –<br> це ідеальний вибір для вашого бізнесу
-			.txtMini За 15 років ми допомогли понад 2 мільйонам підприємців створити зручні та красиві сайти на базі наших шаблонів.
-			.wrapInput
-				input.inputMain.inputTxt(type="text" placeholder="Введіть ключове слово")
-				input.inputMain.inputBtn(type="button", value="Знайти шаблон вашої мрії")
-			.wrapCategories
-				.itemCategories.img1 Бізнес та послуги
-				.itemCategories.img2 Дизайн та фотографія
-				.itemCategories.img3 Мода та краса
-				.itemCategories.img4 Спорт, туризм та подорожі
-				.itemCategories.img5 Нерухомість
 
+					//- ////////////////////////
+					//- SECT 1
+					//- ////////////////////////
+
+
+		section.bg1
+			.section1.container.block
+				h1 26 640 преміум шаблонів для створення<br> сайтів –<br> це ідеальний вибір для вашого бізнесу
+				.txtMini За 15 років ми допомогли понад 2 мільйонам підприємців створити зручні та красиві сайти на базі наших шаблонів.
+				.wrapInput
+					input.inputMain.inputTxt(type="text" placeholder="Введіть ключове слово")
+					input.inputMain.inputBtn(type="button", value="Знайти шаблон вашої мрії")
+				.wrapCategories
+					.itemCategories.img1 Бізнес та послуги
+					.itemCategories.img2 Дизайн та фотографія
+					.itemCategories.img3 Мода та краса
+					.itemCategories.img4 Спорт, туризм та подорожі
+					.itemCategories.img5 Нерухомість
 
 
 					//- ////////////////////////
@@ -153,11 +194,8 @@ html
 				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
 				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
 				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				.clear_both aaaaaaaaaaaaaaaaa
 			label#ii1(for="i1")
-				img(src="1.png")
-				div Популярні
-				////////////////////////
+				div.icon-tm.icon-rocket2 Популярні
 			input(type="radio" name="tabs" id="i2")
 			.sec1Sub
 				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
@@ -170,8 +208,7 @@ html
 				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
 			.clear_both
 			label#ii2(for="i2") 
-				img(src="1.png") 
-				div Нові
+				div.icon-tm.icon-flag Нові
 			input(type="radio" name="tabs" id="i3")
 			.sec1Sub
 				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
@@ -184,8 +221,7 @@ html
 				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
 			.clear_both
 			label#ii3(for="i3")
-				img(src="1.png") 
-				div Багатофункціональні
+				div.icon-tm.icon-like Багатофункціональні
 
 
 							//-/////////////
@@ -193,16 +229,16 @@ html
 							//-/////////////
 
 		section.container.wrapSec5.block
-			mixin block5(i, h4, p)
+			mixin block5(h4, p)
 				.block5
-					img.icon5(src=i) 
+					.icon5(class!=attributes.class)
 					h4= h4
 					p.txtMini= p
-			+block5("img/1.png", 'Безпечні платежі1', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')
-			+block5("img/1.png", 'Безпечні платеж2і', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')
-			+block5("img/1.png", 'Безпечні платежі3', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')
-			+block5("img/1.png", 'Безпечні платежі4', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')
-			+block5("img/1.png", 'Безпечні платежі5', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')
+			+block5('Безпечні платежі', 'Сплата шаблонів через популярні платіжні системи або за допомогою пластикових карт.')(class= 'iconPayment')
+			+block5('Продукт високої якості', 'Наші рішення розроблені професіоналами з досвідом роботи понад 8 років.')(class= 'iconQuality')
+			+block5('Повернення грошей протягом 14 днів', 'Ми повернемо гроші, якщо ви передумаєте купувати продукт.')(class= 'iconMoney')
+			+block5('Служба підтримки 24/7', 'Наші фахівці завжди готові допомогти вам у налаштуванні шаблону.')(class= 'iconImprove')
+			+block5('100% гарантія якості', 'Якщо ви не задоволені придбаним продуктом, ми поміняємо його на інший безкоштовно.')(class= 'iconLike')
 
 
 							//-/////////////
@@ -221,21 +257,21 @@ html
 
 		section.Bg7
 			.container.wrapSec7.block
-				img.img7(src="img/2.png", alt="")
+				img.img7(src="img/Consultant.png", alt="")
 				h2.h2_7 Ваш персональний помічник
 				.wrap7
 					.l7
-						mixin block7(i, sp)
+						mixin block7(sp)
 							.block7
-								img.icon7(src=i)
+								.icon5.icon7(class!=attributes.class)
 								span= sp
-						+block7("img/1.png", 'Заощадить ваш час на пошук шаблону')
-						+block7("img/1.png", '2Заощадить ваш час на пошук шаблону')
-						+block7("img/1.png", '3Заощадить ваш час на пошук шаблону')
+						+block7('Заощадить ваш час на пошук шаблону')(class= 'iconImprove')
+						+block7('Обере ідеальний шаблон спеціально для вас')(class= 'iconImprove')
+						+block7('Відповість на всі питання про шаблони')(class= 'iconImprove')
 					.r7
-						+block7("img/1.png", '4Заощадить ваш час на пошук шаблону')
-						+block7("img/1.png", '5Заощадить ваш час на пошук шаблону')
-						+block7("img/1.png", '6Заощадить ваш час на пошук шаблону')
+						+block7('Допоможе придбати обраний продукт')(class= 'iconPayment')
+						+block7('Безкоштовно замінить продукт, якщо ви передумаєте')(class= 'iconImprove')
+						+block7('Буде терплячим та доброзичливим :)')(class= 'iconLike')
 				input.inputBtn7(type="button", value="Отримати допомогу та знайти свій ідеальний шаблон")
 
 
