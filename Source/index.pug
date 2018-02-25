@@ -246,9 +246,31 @@ html
 							//-/////////////
 
 
-		section.Bg6
-			.container.wrapSec6.block
-
+		section.posr
+			.wrapSlider6
+				.Slider
+					div
+						img.imgSlide6(src="img/Review-1_new.png", alt="")
+					div
+						img.imgSlide6(src="img/Review-2_new.png", alt="")
+					div
+						img.imgSlide6(src="img/Review-3_new.png", alt="")
+					div
+						img.imgSlide6(src="img/Review-4_new.png", alt="")
+			.wrapSec6
+				.container.block.db
+					.h1 Ми зробили щасливими понад 3 мільйонів клієнтів
+					.wrapCustomers
+						mixin customer6(i, n, p)
+							.customersItems
+								.wrapCircle
+									img.imgItem6(src=i, alt="customers")
+									.txt6= n
+								.p6= p
+						+customer6('img/46.png', '46%', 'наших клієнтів зробили повторні покупки')
+						+customer6('img/38.png', '38%', 'наших клієнстворили свій перший сайт з нами')
+						+customer6('img/98.png', '98%', 'наших клієнтів залишилися задоволені нашою продукцією')
+						+customer6('img/21.png', '21%', 'наших відвідувачів придбали два і більше шаблонів')
 
 							//-/////////////
 							//-SECT 7
@@ -312,7 +334,7 @@ html
 
 
 //- script(src="script.js")
-script(src="slider6.js")
 script(src="http://127.0.0.1:35729/livereload.js?ext=Firefox&extver=0.0.46")
 link(href='style.css' rel='stylesheet' type='text/css')
 
+script(src="slider6.js")

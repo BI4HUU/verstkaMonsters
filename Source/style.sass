@@ -539,15 +539,58 @@ nav
 	//SECT 6
 	///////////////
 
-
-.Bg6
-	clear: both
-	height: 400px
-	background-image: radial-gradient(circle at 48% 108%, #607d8b, #243238)
-
+.posr
+	position: relative
+.db
+	display: block
 .wrapSec6
-
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	.h1
+		margin: auto
+		font-size: 3.8em
+		font-weight: 700
+		color: #fff
+		text-align: center
+		-webkit-margin-before: 0.83em;
+		-webkit-margin-after: 0.83em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+.wrapCustomers
+	display: flex
+	width: 100%
+.customersItems
+	box-sizing: border-box
+	color: #eee
+	width: 25%
+	padding: 8px
 	
+	.p6 
+		margin: 8px auto
+		text-align: center
+		width: 80%
+		text-transform: lowercase
+	.wrapCircle
+		position: relative
+		height: 80px
+		width: 80px
+		margin: 0 auto  18px auto
+		box-sizing: border-box
+.txt6
+	font-size: 1.6em
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+// .imgItem6
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+
 	///////////////
 	//SECT 7
 	///////////////
@@ -693,3 +736,98 @@ nav
 	left: 91%
 	min-width: 220px
 	text-align: left
+
+
+
+
+	//-/////////////
+	//-SLIDER 6
+	//-///////////
+
+.posr
+	position: relative
+	height: 883px
+	width: 100%
+	overflow: hidden
+
+.wrapSlider6
+	position: absolute
+	height: 883px
+	width: 2500px
+	top: 0
+	bottom: 0
+	left: 50%
+
+.Slider
+	position: relative
+	height: 883px
+	width: 2500px
+	transform: translate( -50%,0)
+	overflow: hidden
+
+.slide:after
+	content: ''
+	display: block
+	position: absolute
+	z-index: 7777
+	top: 0
+	bottom: 0
+	height: 100%
+	width: 100%
+	background: radial-gradient(circle at 48% 108%, RGBA(96,125,139, .4), RGBA(36,50,56, .7))
+
+.slide
+	position: absolute
+	height: 100%
+	width: 100%
+
+.Panel
+	position: absolute
+	z-index: 8888
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+.bigButton
+	opacity: 0
+	position: absolute
+	height: 60%
+	width: 20%
+	display: flex
+	justify-content: center
+	align-items: center
+	box-sizing: border-box
+	font: 200px GOST Type BU 
+	background: rgba(88,88,88, 0.2)
+	&:hover
+		opacity: 1
+
+.buttonLeft
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+	border-top-right-radius: 40%
+	border-bottom-right-radius: 40%
+
+.buttonRight
+	right: 0
+	top: 50%
+	transform: translateY(-50%)
+	border-top-left-radius: 40%
+	border-bottom-left-radius: 40% 
+
+.wrapButtonNumber
+	position: absolute
+	bottom: 3vh
+	width: 100%
+	opacity: 0
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	&:hover
+		opacity: 1
+
+.imgSlide6 
+	width: 100%
+	height: auto
