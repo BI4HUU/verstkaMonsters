@@ -543,6 +543,24 @@ nav
 	position: relative
 .db
 	display: block
+.m6slideTxtWrap
+	margin: 20% 5% 0 50%
+	position: relative
+	z-index: 6666
+	.h6_1_5
+		color: #90a4ae
+		text-transform: uppercase
+		font-weight: bold
+		padding-bottom: 20px
+		letter-spacing: 1.6px
+		font-size: 16px
+		line-height: 24px
+	.p6
+		color: #fff	
+		font-size:  30px
+		line-height: 39px
+		font-style: italic
+
 .wrapSec6
 	position: absolute
 	top: 0
@@ -586,10 +604,56 @@ nav
 	left: 50%
 	transform: translate(-50%, -50%)
 
-// .imgItem6
-// 	position: absolute
-// 	top: 0
-// 	left: 0
+.wrapPanelSlider
+	display: flex
+	justify-content: space-between
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+
+.itemReview:last-child
+	border-right: 0px solid #b0bec5
+
+.itemReview:hover
+	border: 2px solid #90caf9
+
+.itemReview:hover .h3Name
+	color: #fff
+
+.itemReview:hover .imgReview
+	opacity: 1
+.itemReview:active
+	background: rgba(0, 0, 255, 0.3)
+.itemReview
+	display: flex
+	padding: 20px 0px 20px 40px
+	margin: 30px 0
+	border: 1px solid RGBA(176,190,197, 0.5)
+	border-left: 0px solid RGBA(176,190,197, 0.5)
+	width: 25%
+	box-sizing: border-box
+	.imgReview
+		height: 60px
+		width: 60px
+		opacity: .4
+.wrapName
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-left: 10px
+	padding: 5px 0
+	box-sizing: border-box
+	height: 60px
+
+.h3Name
+	color: #90caf9
+	font-weight: bold
+	font-size: 15px
+	line-height: 22px
+	margin-bottom: 10px
+.itemReview 
+
 
 	///////////////
 	//SECT 7
@@ -769,7 +833,6 @@ nav
 	content: ''
 	display: block
 	position: absolute
-	z-index: 7777
 	top: 0
 	bottom: 0
 	height: 100%

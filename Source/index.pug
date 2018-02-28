@@ -251,6 +251,12 @@ html
 				.Slider
 					div
 						img.imgSlide6(src="img/Review-1_new.png", alt="")
+						.wrapSec6
+							.container.db
+								.m6slideTxtWrap
+									.h6_1_5 Дмитро А.
+									.p6 Одне задоволення працювати з шаблонами TemplateMonster. Якщо я знаю, що мені потрібно, маю своє бачення майбутнього сайту, то підібрати відповідне готове рішення з колекції TemplateMonster вже не становить великих труднощів.
+
 					div
 						img.imgSlide6(src="img/Review-2_new.png", alt="")
 					div
@@ -271,7 +277,17 @@ html
 						+customer6('img/38.png', '38%', 'наших клієнстворили свій перший сайт з нами')
 						+customer6('img/98.png', '98%', 'наших клієнтів залишилися задоволені нашою продукцією')
 						+customer6('img/21.png', '21%', 'наших відвідувачів придбали два і більше шаблонів')
-
+				.wrapPanelSlider.container
+					mixin nameSlide(i, n, p)
+						.itemReview(onclick!=attributes.onclick)
+							img.imgReview(src=i, alt="")
+							.wrapName
+								.h3Name= n
+								.txtMini= p
+					+nameSlide('img/6_1.png', 'Дмитро А.', 'Розробник')(onclick='verification(1)')
+					+nameSlide('img/6_2.png', 'Єлизавета', 'Власник магазину')(onclick='verification(2)')
+					+nameSlide('img/6_3.png', 'Сергій K.', 'Фінансовий Консультант')(onclick='verification(3)')
+					+nameSlide('img/6_4.png', 'Максим А.', 'Агентство по дизайну')(onclick='verification(4)')
 							//-/////////////
 							//-SECT 7
 							//-/////////////
