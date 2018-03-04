@@ -1,5 +1,5 @@
 var arrImg5 = document.querySelectorAll('.img5_')
-var wrap5 = document.querySelector('#id5')
+var wrap5 = document.querySelector('#id2')
 setTimeout(
 	()=>{
 		// wrap5 = document.querySelector('#id5').clientWidth

@@ -215,10 +215,10 @@ html
 				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
 				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
 				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
 			.clear_both
 			label#ii3(for="i3")
 				div.icon-tm.icon-like Багатофункціональні
@@ -228,7 +228,7 @@ html
 							//-SECT 5 X3
 							//-/////////////
 
-		section.container.wrapSec5.block
+		section.container.wrapSec5.block#wrapSec5
 			mixin block5(h4, p)
 				.block5
 					.icon5(class!=attributes.class)
@@ -249,23 +249,21 @@ html
 		section.posr
 			.wrapSlider6
 				.Slider
-					div
-						img.imgSlide6(src="img/Review-1_new.png", alt="")
-						.wrapSec6
-							.container.db
-								.m6slideTxtWrap
-									.h6_1_5 Дмитро А.
-									.p6 Одне задоволення працювати з шаблонами TemplateMonster. Якщо я знаю, що мені потрібно, маю своє бачення майбутнього сайту, то підібрати відповідне готове рішення з колекції TemplateMonster вже не становить великих труднощів.
-
-					div
-						img.imgSlide6(src="img/Review-2_new.png", alt="")
-					div
-						img.imgSlide6(src="img/Review-3_new.png", alt="")
-					div
-						img.imgSlide6(src="img/Review-4_new.png", alt="")
+					mixin slide(i, h, p)
+						div
+							img.imgSlide6(src=i, alt="")
+							.wrapSec6_2
+								.container.db
+									.m6slideTxtWrap
+										.h6_1_5= h
+										.p6= p
+					+slide("img/Review-1_new.png", 'Дмитро А.', 'Кілька місяців тому клієнт замовив мені сучасний і багатофункціональний сайт. Мій вибір впав на дизайни від TemplateMonster. Переглянув безліч рішень і зупинився на яскравішому. Дуже крутий шаблон з регулярними оновленнями!')
+					+slide("img/Review-2_new.png", 'Єлизавета', 'Я переглянула безліч різних шаблонів спортивних магазинів, але дизайн TemplateMonster підкорив мене. Якщо буде необхідно, придбаю ще кілька шаблонів у вас. Монстри, ви чудові! Даю 5 зірок!')
+					+slide("img/Review-3_new.png", 'Сергій K.', 'Одне задоволення працювати з шаблонами TemplateMonster. Якщо я знаю, що мені потрібно, маю своє бачення майбутнього сайту, то підібрати відповідне готове рішення з колекції TemplateMonster вже не становить великих труднощів.')
+					+slide("img/Review-4_new.png", 'Максим А.', 'Команда TemplateMonster розробила кращий WordPress шаблон на ринку. Я на 100% впевнений, що цей дизайн непоганий для всіх клієнтів нашої студії. Вже 5 років в своїй роботі використовуємо тільки продукти TM. Всім задоволені.')
 			.wrapSec6
 				.container.block.db
-					.h1 Ми зробили щасливими понад 3 мільйонів клієнтів
+					.h1 Ми зробили щасливими понад 4 мільйонів клієнтів
 					.wrapCustomers
 						mixin customer6(i, n, p)
 							.customersItems
@@ -282,8 +280,8 @@ html
 						.itemReview(onclick!=attributes.onclick)
 							img.imgReview(src=i, alt="")
 							.wrapName
-								.h3Name= n
-								.txtMini= p
+								.h3Name6= n
+								.txtMini6= p
 					+nameSlide('img/6_1.png', 'Дмитро А.', 'Розробник')(onclick='verification(1)')
 					+nameSlide('img/6_2.png', 'Єлизавета', 'Власник магазину')(onclick='verification(2)')
 					+nameSlide('img/6_3.png', 'Сергій K.', 'Фінансовий Консультант')(onclick='verification(3)')
@@ -338,19 +336,30 @@ html
 						+item8('Back-end$600', 'Розробники перетворюють статичний html-код на працюючий шаблон для сайту.')(class="item8_5")
 						+item8('Забезпечення якості $400', 'Фахівці із забезпечення якості пильнують за тим, щоб продукт не містив помилок.')(class="item8_6")
 						
+		footer.container.block.wrapFooter
+			mixin itemFut (h3, ...pF)
+				h3.Fh3(class!=attributes.class)= h3
+				each pf in pF
+					a(href="")
+					p.Fp= pf
+			.column20
+				+itemFut ('Продукти', 'Wordpress шаблони', 'HTML шаблони')
+			.column20
+				+itemFut ('Категорії', 'Wordpress шаблони', 'HTML шаблони')
+			.column20
+				+itemFut ('Компанія', 'Wordpress шаблони', 'HTML шаблони')
+			.column40
+				.column50
+					+itemFut ('Підтримка', 'Wordpress шаблони', 'HTML шаблони')
+				.column50
+					+itemFut ('Підписатися на', 'Wordpress шаблони', 'HTML шаблони')
 
 
 
-		aside
-
-		footer 
 
 
-
-
-
-//- script(src="script.js")
 script(src="http://127.0.0.1:35729/livereload.js?ext=Firefox&extver=0.0.46")
 link(href='style.css' rel='stylesheet' type='text/css')
+script(src="script.js")
 
 script(src="slider6.js")
