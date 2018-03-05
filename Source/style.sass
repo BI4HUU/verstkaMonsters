@@ -393,6 +393,8 @@ nav
 	border-radius: 5px 5px 0 0
 	background: #eceff1
 	border-top: 5px solid #03c637
+.Bg2
+	background: #d6dee1
 .sec1Sub:before
 	content: ''
 	background: #eceff1
@@ -825,11 +827,35 @@ nav
 
 .wrapFooter
 	display: flex
+
 .Fh3
 	font: 700 16px/1.2 'PT Sans'
 	color: #243238
-.column20
-	// display: flex
+	position: relative
+
+.Fh3:before
+	content: '\32'
+	font-family: 'icomoon'  !important
+	font-size: 20px
+	color: #000
+	height: 20px
+	width: 20px
+	position: absolute
+	left: -30
+
+.futA:hover
+	color: #0d47a1
+.futA
+	font-weight: 700
+	font-size: 13px
+	line-height: 22px
+	text-decoration: none
+	color: #2196f3
+	cursor: pointer
+	white-space: nowrap
+.column20, .column50
+	display: flex
+	flex-direction: column
 	padding-left: 40px
 	width: 20%
 	box-sizing: border-box
@@ -837,12 +863,13 @@ nav
 	display: flex
 	width: 40%
 	box-sizing: border-box
+	flex-wrap: wrap
 .column50
-	// display: flex
-	padding-left: 40px
 	width: 50%
+.column100
+	width: 100%
+	padding-left: 40px
 	box-sizing: border-box
-
 
 
 

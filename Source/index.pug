@@ -171,64 +171,65 @@ html
 					//- ////////////////////////
 		
 
-		section.wrapSec1Head.container
-			input(type="radio" name="tabs" id="i1"  checked='checked')
-			.sec1Sub
-				mixin sect2menu3(s, i, h4, p)
-					.wrapEl
-						.Nav2SubEl
-							a(href="#", title="title") 
-								img.img5_(src=s)
-							.wrapData
-								.left2
-									img(width='30px' src=i)
-									.wrapTxt
-										h4= h4
-										p= p
-								.like 0
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-				+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
-			label#ii1(for="i1")
-				div.icon-tm.icon-rocket2 Популярні
-			input(type="radio" name="tabs" id="i2")
-			.sec1Sub
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-				+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
-			.clear_both
-			label#ii2(for="i2") 
-				div.icon-tm.icon-flag Нові
-			input(type="radio" name="tabs" id="i3")
-			.sec1Sub
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-				//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
-			.clear_both
-			label#ii3(for="i3")
-				div.icon-tm.icon-like Багатофункціональні
+		section.Bg2
+			.wrapSec1Head.container
+				input(type="radio" name="tabs" id="i1"  checked='checked')
+				.sec1Sub
+					mixin sect2menu3(s, i, h4, p)
+						.wrapEl
+							.Nav2SubEl
+								a(href="#", title="title") 
+									img.img5_(src=s)
+								.wrapData
+									.left2
+										img(width='30px' src=i)
+										.wrapTxt
+											h4= h4
+											p= p
+									.like 0
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+					+sect2menu3("img/img_5_1.jpg", "img/1.png", 'Tobacco1', '1Адаптивний motocms')
+				label#ii1(for="i1")
+					div.icon-tm.icon-rocket2 Популярні
+				input(type="radio" name="tabs" id="i2")
+				.sec1Sub
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+					+sect2menu3("img/img_5_2.jpg", "img/1.png", 'Tobacco2', '2Адаптивний motocms')
+				.clear_both
+				label#ii2(for="i2") 
+					div.icon-tm.icon-flag Нові
+				input(type="radio" name="tabs" id="i3")
+				.sec1Sub
+					+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					+sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+					//- +sect2menu3("img/img_5_3.jpg", "img/1.png", 'Tobacco3', '3Адаптивний motocms')
+				.clear_both
+				label#ii3(for="i3")
+					div.icon-tm.icon-like Багатофункціональні
 
 
 							//-/////////////
 							//-SECT 5 X3
 							//-/////////////
 
-		section.container.wrapSec5.block#wrapSec5
+		section.container.wrapSec5.block
 			mixin block5(h4, p)
 				.block5
 					.icon5(class!=attributes.class)
@@ -337,23 +338,23 @@ html
 						+item8('Забезпечення якості $400', 'Фахівці із забезпечення якості пильнують за тим, щоб продукт не містив помилок.')(class="item8_6")
 						
 		footer.container.block.wrapFooter
-			mixin itemFut (h3, ...pF)
+			mixin itemFut (h3, arr)
 				h3.Fh3(class!=attributes.class)= h3
-				each pf in pF
-					a(href="")
-					p.Fp= pf
+				each val, index in arr
+					a.futA(href=index)= val
 			.column20
-				+itemFut ('Продукти', 'Wordpress шаблони', 'HTML шаблони')
+				+itemFut('Продукти', {'#1':'Wordpress шаблони','#2':'HTML шаблони','#3':'OpenCart шаблони','#4':' Joomla шаблони','#5':'PrestaShop шаблони','#6':'WooCommerce шаблони','#7':'Конструктор сайтів ', '#8':'Magento шаблони ', '1#19':'Адаптивні шаблони', '#10':'Shopify шаблони'})(class="like")
 			.column20
-				+itemFut ('Категорії', 'Wordpress шаблони', 'HTML шаблони')
+				+itemFut('Категорії', {'#1':'Wordpress шаблони','#2':'HTML шаблони','#3':'OpenCart шаблони','#4':' Joomla шаблони','#5':'PrestaShop шаблони','#6':'WooCommerce шаблони','#7':'Конструктор сайтів ', '#8':'Magento шаблони ', '1#19':'Адаптивні шаблони', '#10':'Shopify шаблони'})(class="like")
 			.column20
-				+itemFut ('Компанія', 'Wordpress шаблони', 'HTML шаблони')
+				+itemFut('Компанія', {'#1':'Wordpress шаблони','#2':'HTML шаблони','#3':'OpenCart шаблони','#4':' Joomla шаблони','#5':'PrestaShop шаблони','#6':'WooCommerce шаблони','#7':'Конструктор сайтів ', '#8':'Magento шаблони '})(class="like")
 			.column40
 				.column50
-					+itemFut ('Підтримка', 'Wordpress шаблони', 'HTML шаблони')
+					+itemFut('Підтримка', {'#1gg':'Wordpress шаблони','#2':'HTML шаблони'})(class="like")
 				.column50
-					+itemFut ('Підписатися на', 'Wordpress шаблони', 'HTML шаблони')
-
+					+itemFut('Підписатися на', {'#1hh':'Wordpress шаблони','#2':'HTML шаблони','#3':'OpenCart шаблони'})(class="like")
+				.column100
+					h3.Fh3.letter Підписатися на новини
 
 
 
