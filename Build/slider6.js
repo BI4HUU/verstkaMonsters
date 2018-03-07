@@ -19,7 +19,7 @@ for ( let i = 0; i < allSlidesLength; i++ ) {
 	// 	buttonNumber.setAttribute( `onclick`, `verification(${i+1})` );
 	// document.getElementsByClassName( `wrapButtonNumber` )[0].appendChild(buttonNumber);
 }
-let allButtonNumber = document.getElementsByClassName( `h3Name` );
+let allButtonNumber = document.getElementsByClassName( `h3Name6` );
 let allButtonNumber2 = document.getElementsByClassName( `imgReview` );
 let virtualSlideNext = document.getElementsByClassName( `slide${numberNextSlide}` )[0];
 let virtualSlideBack = document.getElementsByClassName( `slide${numberBackSlide}` )[0];
